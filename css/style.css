@@ -8158,13 +8158,12 @@ label {
     -o-transform: scale(1.2) rotate(360deg);
     transform: scale(1.2) rotate(360deg);
 }
-#contact button {
+.modal-footer button {
     background-color: #fe9141;
     color: #f5f9fa;
     border: 1px solid #fe8228;
-    margin: 3rem;
 }
-#contact button:hover {
+.modal-footer button:hover {
     background-color: #fe8228;
     border: 1px solid #fe740e;
     color: #f5f9fa;

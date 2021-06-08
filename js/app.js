@@ -4532,11 +4532,11 @@ if (
                 (this.bodyIsOverflowing = document.body.clientWidth < t), (this.scrollbarWidth = this.measureScrollbar());
             }),
             (n.prototype.setScrollbar = function () {
-                var t = parseInt(this.$body.css("padding-right") || 0, 10);
-                (this.originalBodyPad = document.body.style.paddingRight || ""), this.bodyIsOverflowing && this.$body.css("padding-right", t + this.scrollbarWidth);
+                var t = parseInt(0);
+                //(this.originalBodyPad = document.body.style.paddingRight || ""), //this.bodyIsOverflowing && this.$body.css("padding-right", 0);
             }),
             (n.prototype.resetScrollbar = function () {
-                this.$body.css("padding-right", this.originalBodyPad);
+                //this.$body.css("padding-right", 0);
             }),
             (n.prototype.measureScrollbar = function () {
                 var t = document.createElement("div");
@@ -25951,76 +25951,7 @@ if (
             });
         });
         var b = [
-                {
-                    title: "Nintendo Disney Art Academy",
-                    subtitle: "Promo website for Nintendo's 3DS game",
-                    description:
-                        'Nintendo Disney Art Academy is a website designed by <a href="http://enterthestudio.com/">Enter the Studio</a> for Nintendo\'s 3DS game. It was developed using technologies like GSAP, CSS3, slick.js, and JQuery. It was also customized and tested on many modern devices including the 3DS console.',
-                    code: "disney",
-                    buttons: [!1, !1, !1, "http://artacademy.nintendo.com/disney/"],
-                },
-                {
-                    title: "Fridge Binge",
-                    subtitle: "Website for a retro games startup",
-                    description:
-                        "Fridge Binge was developed and designed as a gaming site using AngularJS, Node.js, MongoDB, Express, Handlebars, Passport, Bcrypt, and RESTful APIs. It's Auth sytem was later migrated to Angular 2 and Firebase as a future proof upgrade.",
-                    code: "fridgebinge",
-                    buttons: ["desktop", !1, !1, "http://www.fridgebinge.com"],
-                },
-                {
-                    title: "Arizona Department of Environmental Quality",
-                    subtitle: "ADEQ Interactive Microsite",
-                    description:
-                        'ADEQ Interactive Microsite is a website designed by <a href="http://http://killerinfographics.com/.com/">Killer Infographics</a> and developed using GSAP, JQuery, Illustrator, and responsive design principles. It uses SVG animations for a more elaborate level of interactivity.',
-                    code: "adeq",
-                    buttons: [!1, !1, !1, "http://kiadeq3.surge.sh"],
-                },
-                {
-                    title: "Class Appraisal",
-                    subtitle: "Appraisal Data Interactive Infographics",
-                    description:
-                        'Class Appraisal is a collection of infographics designed by <a href="http://http://killerinfographics.com/.com/">Killer Infographics</a>. Their architechture allow continuos graphic and data updates without coding knowledge. It was developed using D3.js, topojson.js, ArcGIS, AJAX, and many other web technologies.',
-                    code: "classappraisal",
-                    buttons: [!1, !1, !1, "https://www.classappraisal.com/interactive-dashboard"],
-                },
-                {
-                    title: "Harmony Styles",
-                    subtitle: "Stylist Business Website",
-                    description: "Harmony Styles is a responsive business website designed by Tyler Warren. It was developed using CSS3, JQuery, and many other web technologies.",
-                    code: "harmonystyles",
-                    buttons: [!1, !1, !1, "http://harmonystyles.net"],
-                },
-                {
-                    title: "Car Crash",
-                    subtitle: "Retro web game",
-                    description:
-                        'Car Crash is a web game that connects with <a href="http://fridgebinge.com/">FridgeBinge.com</a> through Restful API calls to create, update, delete (CRUD) user\'s data. It was designed with the help of Tyler Warren and developed using Phaser, Browserify, AJAX, RESTful APIs, and Photoshop.',
-                    code: "carcrash",
-                    buttons: [!1, !1, !1, "http://www.fridgebinge.com/games/carcrash"],
-                },
-                {
-                    title: "Rosie",
-                    subtitle: "MIDI Generator Desktop App for macOS",
-                    description:
-                        "Rosie is a MIDI Generator Desktop App for macOS. It creates a collection of midi files that randomly generate rythmic patterns, melodies, chords, tracks and full songs. It's object oriented design is based on the MIDI Specification and Jazz music theory. It can be used for musical brainstorming and was developed using Node.js and Electron.",
-                    code: "rosie",
-                    buttons: ["desktop", !1, !1, !1],
-                },
-                {
-                    title: "Risk Visualizer",
-                    subtitle: "Responsive web app to visualize health risk",
-                    description:
-                        "The Risk Visualizer was a project developed for Kindra C., a nurse practitioner in need of a visual feedback for her patients. It was designed and developed using HTML, AngularJS, Bootstrap, and responsive design principles.",
-                    code: "riskvisualizer",
-                    buttons: [!1, !1, !1, "http://riskvisualizer.xaviro.com/"],
-                },
-                {
-                    title: "HDR Photography",
-                    subtitle: "Web galery showcasing HDR photos of National Parks",
-                    description: "This is a personal gallery showcasing HDR photos of US National Parks.",
-                    code: "hdrgallery",
-                    buttons: [!1, !1, !1, "http://photogallery.xaviro.com/"],
-                },
+                
             ],
             T = 0,
             w = $("#portfolio-modal"),
@@ -26057,7 +25988,7 @@ if (
             F.click(function () {
                 window.open(b[T].buttons[3]);
             });
-        var D = videojs("portfolio-video");
+        var D = null;
         $(".btn-resume").click(function () {
             $("#resume-modal").modal();
         }),
