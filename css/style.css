@@ -3,7 +3,12 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-
+:root {
+	--logo: #fe9140;
+	--subTitle: #f2f2f2;
+	--primary: #36bed9;
+	--colorText: #000;
+}
 .label,
 sub,
 sup {
@@ -6677,7 +6682,7 @@ h2 {
     font-size: 2rem;
 }
 #header {
-    padding: 1rem 0 1rem;
+    padding: 0;
     /* background: -webkit-gradient(linear, left top, left bottom, from(#323333), to(#2a2b2b)); */
     background: -webkit-linear-gradient(#323333, #2a2b2b);
     background: -o-linear-gradient(#323333, #2a2b2b);
@@ -7284,4 +7289,92 @@ label {
     background-color: #fff;
     padding: 0.5rem;
     border-radius: 2rem;
+}
+
+#mainText {
+	/* width: 90%; */
+	margin: auto;
+	max-width: 700px;
+	/* min-height: 100vh; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+	outline: none;
+}
+
+
+.logo {
+	padding: 10px;
+	/* border: 5px solid var(--logo); */
+	color: var(--subTitle);
+}
+
+.logo .subtitulo {
+	text-align: center;
+    color: var(--subTitle);
+    background: var(--logo);
+    padding: 0;
+    transition: .5s ease all;
+    font-size: 27px;
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo:hover .subtitulo {
+	background: var(--primary);
+}
+
+.text-animate {
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.text-animate > div {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	transition: .3s ease all;
+}
+
+.text-animate > div.animacion {
+	transform: translateY(-100px);
+}
+
+.text-animate > div span {
+	font-size: 77px;
+	font-weight: normal;
+	line-height: 77px;
+}
+
+.text-animate .hidden-line {
+	position: absolute;
+	top: 100px;
+}
+
+@media screen and (max-width: 600px){
+	.text-animate > div span {
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	.text-animate .hidden-line {
+		top: 50px;
+	}
+
+	.text-animate > div.animacion {
+		transform: translateY(-50px);
+	}
+
+	.logo .subtitulo {
+		font-size: 20px;
+	}
 }
